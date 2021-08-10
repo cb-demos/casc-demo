@@ -1,0 +1,14 @@
+apiVersion: "1"
+id: "casc-demo"
+description: "The configuration bundle for the CasC Demo controller"
+version: "1"
+plugins:
+  - "plugins.yaml"
+jcasc:
+  - "jenkins.yaml"
+catalog:
+  - "plugin-catalog.yaml"
+rbac:
+  - "rbac.yaml"
+items:
+  - "items.yaml"
