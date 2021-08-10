@@ -1,0 +1,5 @@
+displayName: CasC Demo Catalog
+name: casc-demo-catalog
+type: plugin-catalog
+version: "1" 
+configurations: []
