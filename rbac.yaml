@@ -7,11 +7,8 @@ roles:
   permissions:
   - hudson.model.Computer.Connect
   - hudson.model.Hudson.UploadPlugins
-  - hudson.model.Computer.ViewOwners
-  - com.cloudbees.pipeline.governance.templates.catalog.TemplateCatalogAction.ManageCatalogs
   - hudson.model.Item.Cancel
   - com.cloudbees.plugins.credentials.CredentialsProvider.View
-  - com.cloudbees.jenkins.plugin.metrics.views.Alerter.View
   - hudson.model.Item.Build
   - hudson.model.Item.Move
   - com.cloudbees.plugins.credentials.CredentialsProvider.Update
@@ -21,7 +18,6 @@ roles:
   - hudson.model.Item.Promote
   - hudson.model.Item.Configure
   - hudson.model.Item.Read
-  - com.cloudbees.pipeline.governance.templates.catalog.TemplateCatalogAction.ViewCatalogs
   - hudson.scm.SCM.Tag
   - hudson.model.Item.Discover
   - hudson.model.Hudson.Read
@@ -43,24 +39,18 @@ roles:
   permissions:
   - hudson.model.Computer.Connect
   - hudson.model.Hudson.UploadPlugins
-  - hudson.model.Computer.ViewOwners
-  - jenkins.metrics.api.Metrics.View
-  - com.cloudbees.pipeline.governance.templates.catalog.TemplateCatalogAction.ManageCatalogs
   - hudson.model.Hudson.ConfigureUpdateCenter
   - nectar.plugins.rbac.groups.Group.Manage
   - hudson.model.Item.Cancel
   - hudson.model.Hudson.Administer
   - com.cloudbees.plugins.credentials.CredentialsProvider.View
-  - com.cloudbees.jenkins.plugin.metrics.views.Alerter.View
   - hudson.model.Computer.Delete
   - hudson.model.Item.Build
   - hudson.model.Item.Move
   - com.cloudbees.plugins.credentials.CredentialsProvider.Update
   - hudson.model.Item.Create
-  - com.cloudbees.jenkins.plugin.metrics.views.Alerter.Mute
   - com.cloudbees.plugins.credentials.CredentialsProvider.Delete
   - hudson.model.Run.Replay
-  - jenkins.metrics.api.Metrics.ThreadDump
   - hudson.model.Hudson.RunScripts
   - hudson.model.View.Create
   - hudson.model.Computer.Secure
@@ -77,9 +67,7 @@ roles:
   - hudson.model.Item.Configure
   - hudson.model.Computer.Build
   - hudson.model.Item.Read
-  - jenkins.metrics.api.Metrics.HealthCheck
   - nectar.plugins.rbac.groups.Group.Create
-  - com.cloudbees.pipeline.governance.templates.catalog.TemplateCatalogAction.ViewCatalogs
   - hudson.scm.SCM.Tag
   - hudson.model.Item.Discover
   - hudson.model.Hudson.Read
