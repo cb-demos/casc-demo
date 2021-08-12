@@ -4,53 +4,30 @@ roles:
 - filterable: 'true'
   name: authenticated
 - filterable: 'true'
-  permissions:
-  - hudson.model.Computer.Connect
-  - hudson.model.Hudson.UploadPlugins
-  - hudson.model.Item.Cancel
-  - com.cloudbees.plugins.credentials.CredentialsProvider.View
-  - hudson.model.Item.Build
-  - hudson.model.Item.Move
-  - com.cloudbees.plugins.credentials.CredentialsProvider.Update
-  - hudson.model.Item.Create
-  - com.cloudbees.plugins.credentials.CredentialsProvider.Delete
-  - com.cloudbees.plugins.credentials.CredentialsProvider.ManageDomains
-  - hudson.model.Item.Promote
-  - hudson.model.Item.Configure
-  - hudson.model.Item.Read
-  - hudson.scm.SCM.Tag
-  - hudson.model.Item.Discover
-  - hudson.model.Hudson.Read
-  - nectar.plugins.rbac.roles.Role.View
-  - hudson.model.Item.Workspace
-  - hudson.model.Computer.Provision
-  - hudson.model.View.Read
-  - hudson.model.Item.Delete
-  - com.cloudbees.plugins.credentials.CredentialsProvider.Create
-  - nectar.plugins.rbac.groups.Group.View
-  name: developers
-- filterable: 'true'
-  permissions:
-  - hudson.model.Item.Read
   name: restricted
 - filterable: 'true'
   name: anonymous
-- filterable: 'true'
-  permissions:
+- permissions:
   - hudson.model.Computer.Connect
   - hudson.model.Hudson.UploadPlugins
+  - hudson.model.Computer.ViewOwners
+  - jenkins.metrics.api.Metrics.View
+  - com.cloudbees.pipeline.governance.templates.catalog.TemplateCatalogAction.ManageCatalogs
   - hudson.model.Hudson.ConfigureUpdateCenter
   - nectar.plugins.rbac.groups.Group.Manage
-  - hudson.model.Item.Cancel
   - hudson.model.Hudson.Administer
+  - hudson.model.Item.Cancel
   - com.cloudbees.plugins.credentials.CredentialsProvider.View
+  - com.cloudbees.jenkins.plugin.metrics.views.Alerter.View
   - hudson.model.Computer.Delete
   - hudson.model.Item.Build
   - hudson.model.Item.Move
   - com.cloudbees.plugins.credentials.CredentialsProvider.Update
   - hudson.model.Item.Create
+  - com.cloudbees.jenkins.plugin.metrics.views.Alerter.Mute
   - com.cloudbees.plugins.credentials.CredentialsProvider.Delete
   - hudson.model.Run.Replay
+  - jenkins.metrics.api.Metrics.ThreadDump
   - hudson.model.Hudson.RunScripts
   - hudson.model.View.Create
   - hudson.model.Computer.Secure
@@ -59,15 +36,17 @@ roles:
   - hudson.model.Run.Update
   - hudson.model.View.Delete
   - hudson.model.Run.Delete
-  - com.cloudbees.plugins.credentials.CredentialsProvider.ManageDomains
   - hudson.model.Computer.Create
+  - com.cloudbees.plugins.credentials.CredentialsProvider.ManageDomains
   - hudson.model.Item.Promote
   - hudson.model.View.Configure
   - com.cloudbees.jenkins.support.SupportPlugin.DownloadBundle
-  - hudson.model.Item.Configure
   - hudson.model.Computer.Build
+  - hudson.model.Item.Configure
   - hudson.model.Item.Read
+  - jenkins.metrics.api.Metrics.HealthCheck
   - nectar.plugins.rbac.groups.Group.Create
+  - com.cloudbees.pipeline.governance.templates.catalog.TemplateCatalogAction.ViewCatalogs
   - hudson.scm.SCM.Tag
   - hudson.model.Item.Discover
   - hudson.model.Hudson.Read
@@ -83,18 +62,43 @@ roles:
   - hudson.model.Item.Request
   - nectar.plugins.rbac.groups.Group.View
   name: admin
+- filterable: 'true'
+  permissions:
+  - hudson.model.Computer.Connect
+  - jenkins.metrics.api.Metrics.View
+  - com.cloudbees.pipeline.governance.templates.catalog.TemplateCatalogAction.ManageCatalogs
+  - hudson.model.Item.Cancel
+  - com.cloudbees.plugins.credentials.CredentialsProvider.View
+  - com.cloudbees.jenkins.plugin.metrics.views.Alerter.View
+  - hudson.model.Item.Build
+  - hudson.model.Item.Move
+  - hudson.model.Item.Create
+  - com.cloudbees.jenkins.plugin.metrics.views.Alerter.Mute
+  - hudson.model.Item.Promote
+  - hudson.model.Computer.Build
+  - hudson.model.Item.Configure
+  - hudson.model.Item.Read
+  - com.cloudbees.pipeline.governance.templates.catalog.TemplateCatalogAction.ViewCatalogs
+  - hudson.model.Item.Discover
+  - hudson.model.Hudson.Read
+  - hudson.model.Item.Workspace
+  - hudson.model.Computer.Provision
+  - hudson.model.View.Read
+  - hudson.model.Item.Delete
+  - nectar.plugins.rbac.groups.Group.View
+  name: developer
 groups:
 - members:
-    unknown:
-    - sa-users
+    users:
+    - admin
   roles:
   - name: admin
     grantedAt: current
-  name: infra-admin
+  name: administrators
 - members:
-    unknown:
-    - dev-users
+    users:
+    - developer
   roles:
-  - name: developers
+  - name: developer
     grantedAt: current
   name: developers

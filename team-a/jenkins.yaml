@@ -1,28 +1,15 @@
 jenkins:
-  systemMessage: 'This message is configured with CasC.'
   authorizationStrategy: "cloudBeesRoleBasedAccessControl"
-  crumbIssuer:
-    standard:
-      excludeClientIPFromCrumb: true
-  disableRememberMe: false
-  labelAtoms:
-  - name: "default"
-  - name: "master"
-  - name: "nodejs"
-  markupFormatter: "plainText"
-  mode: NORMAL
-  myViewsTabBar: "standard"
   numExecutors: 0
   primaryView:
     all:
       name: "all"
   projectNamingStrategy: "standard"
-  quietPeriod: 5
+  quietPeriod: 0
   remotingSecurity:
     enabled: true
   scmCheckoutRetryCount: 0
   securityRealm: "operationsCenter"
-  slaveAgentPort: 50000
   updateCenter:
     sites:
     - id: "core-mm-offline"
@@ -50,3 +37,18 @@ security:
     usageStatisticsEnabled: true
   sSHD:
     port: -1
+unclassified:
+  buildDiscarders:
+    configuredBuildDiscarders:
+    - "jobBuildDiscarder"
+  cloudBeesSCMReporting:
+    enabled: true
+  gitHubConfiguration:
+    apiRateLimitChecker: ThrottleForNormalize
+tool:
+  cloudbeesPluginUsageAnalyzer:
+    enabled: true
+  git:
+    installations:
+    - home: "git"
+      name: "Default"

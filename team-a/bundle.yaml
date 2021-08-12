@@ -1,6 +1,5 @@
 apiVersion: "1"
-id: "casc-demo"
-description: "The configuration bundle for the CasC Demo controller"
+description: "Team-A CasC bundle"
 plugins:
   - "plugins.yaml"
 jcasc:

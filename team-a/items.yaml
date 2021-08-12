@@ -1,0 +1,22 @@
+removeStrategy:
+  rbac: SYNC
+  items: NONE
+items:
+- kind: folder
+  name: Production jobs
+  description: 'This folder is where all production jobs need to belong.'
+  filteredRoles:
+  - authenticated
+  - anonymous
+  - developer
+- kind: folder
+  name: Sandbox
+  description: 'This is a free for all where anyone can add jobs.'
+  groups:
+  - members:
+      users:
+      - developer
+    roles:
+    - name: admin
+      grantedAt: current
+    name: Sandbox Users
