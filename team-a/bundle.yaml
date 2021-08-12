@@ -1,4 +1,5 @@
 apiVersion: "1"
+id: "team-a"
 description: "Team-A CasC bundle"
 plugins:
   - "plugins.yaml"

@@ -1,0 +1,8 @@
+apiVersion: "1"
+id: "team-b"
+description: "Team-B CasC bundle"
+parent: "team-a"
+plugins:
+  - "plugins.yaml"
+jcasc:
+  - "jenkins.yaml"
