@@ -1,2 +1,2 @@
 plugins:
-- id: cloudbees-slack
+- id: cloudbees-pipeline-policies
