@@ -1,2 +1,2 @@
 plugins:
-- id: slack
+- id: cloudbees-slack
