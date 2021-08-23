@@ -20,3 +20,33 @@ items:
     - name: admin
       grantedAt: current
     name: Sandbox Users
+  items:
+  - orphanedItemStrategy:
+      defaultOrphanedItemStrategy:
+        pruneDeadBranches: true
+        daysToKeep: -1
+        numToKeep: -1
+    kind: multibranch
+    displayName: Test
+    projectFactory:
+      workflowBranchProjectFactory:
+        scriptPath: Jenkinsfile
+    name: Test
+    description: For an introductory tutorial on how to use Jenkins to build a simple
+      Java application with Maven.
+    sourcesList:
+    - branchSource:
+        source:
+          github:
+            traits:
+            - gitHubBranchDiscovery:
+                strategyId: 1
+            - gitHubPullRequestDiscovery:
+                strategyId: 1
+            - gitHubForkDiscovery:
+                strategyId: 1
+            repoOwner: cb-demos
+            credentialsId: 81656758-6389-4c51-9e09-24f8b105be6b
+            repository: simple-java-maven-app-k8s
+            configuredByUrl: true
+            repositoryUrl: https://github.com/cb-demos/simple-java-maven-app-k8s
