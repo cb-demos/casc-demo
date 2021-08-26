@@ -1,6 +1,6 @@
 jenkins:
   authorizationStrategy: "cloudBeesRoleBasedAccessControl"
-  numExecutors: 0
+  numExecutors: 1
   primaryView:
     all:
       name: "all"
