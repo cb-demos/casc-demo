@@ -35,6 +35,16 @@ security:
     creationOfLegacyTokenEnabled: false
     tokenGenerationOnCreationEnabled: false
     usageStatisticsEnabled: true
+  sSHD:
+    port: -1
+unclassified:
+  buildDiscarders:
+    configuredBuildDiscarders:
+    - "jobBuildDiscarder"
+  cloudBeesSCMReporting:
+    enabled: true
+  gitHubConfiguration:
+    apiRateLimitChecker: ThrottleForNormalize
   electricflow:
     configurations:
     - configurationName: "CD"
@@ -44,8 +54,6 @@ security:
       electricFlowUrl: "https://sda.cb-demos.io"
       electricFlowUser: "logdon"
       ignoreSslConnectionErrors: false
-  sSHD:
-    port: -1
   globalLibraries:
     libraries:
     - defaultVersion: "master"
@@ -66,14 +74,6 @@ security:
               - gitHubForkDiscovery:
                   strategyId: 1
                   trust: "gitHubTrustPermissions"
-unclassified:
-  buildDiscarders:
-    configuredBuildDiscarders:
-    - "jobBuildDiscarder"
-  cloudBeesSCMReporting:
-    enabled: true
-  gitHubConfiguration:
-    apiRateLimitChecker: ThrottleForNormalize
 tool:
   cloudbeesPluginUsageAnalyzer:
     enabled: true
