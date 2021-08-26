@@ -119,3 +119,6 @@ plugins:
 - id: workflow-scm-step
 - id: workflow-step-api
 - id: workflow-support
+- id: notification-api
+- id: pipeline-event-step
+- id: operations-center-notification

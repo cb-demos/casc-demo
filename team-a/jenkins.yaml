@@ -20,6 +20,9 @@ jenkins:
   - all:
       name: "all"
   viewsTabBar: "standard"
+notificationConfiguration:
+  enabled: true
+  router: "operationsCenter"
 beekeeper:
   enabled: true
   securityWarnings:
