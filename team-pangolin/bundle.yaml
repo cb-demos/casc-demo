@@ -1,5 +1,5 @@
 apiVersion: "1"
-id: "team-b"
+id: "team-pangolin"
 description: "Team-B CasC bundle"
 parent: "team-a"
 plugins:
