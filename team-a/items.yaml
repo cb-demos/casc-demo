@@ -27,13 +27,11 @@ items:
         daysToKeep: -1
         numToKeep: -1
     kind: multibranch
-    displayName: Test
+    displayName: BeeTV
     projectFactory:
       workflowBranchProjectFactory:
         scriptPath: Jenkinsfile
-    name: Test
-    description: For an introductory tutorial on how to use Jenkins to build a simple
-      Java application with Maven.
+    name: BeeTV
     sourcesList:
     - branchSource:
         source:
@@ -44,9 +42,12 @@ items:
             - gitHubPullRequestDiscovery:
                 strategyId: 1
             - gitHubForkDiscovery:
+                trust:
+                  gitHubTrustPermissions: {}
                 strategyId: 1
             repoOwner: cb-demos
-            credentialsId: 81656758-6389-4c51-9e09-24f8b105be6b
-            repository: simple-java-maven-app-k8s
+            repository: movie-frontend
             configuredByUrl: true
-            repositoryUrl: https://github.com/cb-demos/simple-java-maven-app-k8s
+            repositoryUrl: https://github.com/cb-demos/movie-frontend
+        strategy:
+          allBranchesSame: {}
