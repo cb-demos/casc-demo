@@ -35,8 +35,37 @@ security:
     creationOfLegacyTokenEnabled: false
     tokenGenerationOnCreationEnabled: false
     usageStatisticsEnabled: true
+  electricflow:
+    configurations:
+    - configurationName: "CD"
+      doNotSendBuildDetails: false
+      electricFlowApiVersion: "/rest/v1.0"
+      electricFlowPassword: "{AQAAABAAAAAQ9ArikNn9UyHnU3h9LcXXvMzJ3ZpbS4C1/syyF+EpRq8=}"
+      electricFlowUrl: "https://sda.cb-demos.io"
+      electricFlowUser: "logdon"
+      ignoreSslConnectionErrors: false
   sSHD:
     port: -1
+  globalLibraries:
+    libraries:
+    - defaultVersion: "master"
+      name: "cb-days"
+      retriever:
+        modernSCM:
+          scm:
+            github:
+              configuredByUrl: true
+              repoOwner: "cb-demos"
+              repository: "pipeline-library"
+              repositoryUrl: "https://github.com/cb-demos/pipeline-library"
+              traits:
+              - gitHubBranchDiscovery:
+                  strategyId: 1
+              - gitHubPullRequestDiscovery:
+                  strategyId: 1
+              - gitHubForkDiscovery:
+                  strategyId: 1
+                  trust: "gitHubTrustPermissions"
 unclassified:
   buildDiscarders:
     configuredBuildDiscarders:
