@@ -91,6 +91,7 @@ groups:
 - members:
     users:
     - admin
+    - sa-users
   roles:
   - name: admin
     grantedAt: current
